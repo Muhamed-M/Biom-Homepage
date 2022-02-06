@@ -1,0 +1,952 @@
+@font-face {
+    font-family: 'Chronicle Display';
+    src: url('./fonts/ChronicleDisplay-Black.woff2') format('woff2'),
+        url('./fonts/ChronicleDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('./fonts/BrandonGrotesque-Black.woff2') format('woff2'),
+        url('./fonts/BrandonGrotesque-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('./fonts/BrandonGrotesque-Light.woff2') format('woff2'),
+        url('./fonts/BrandonGrotesque-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===============
+   Table of contents:
+   1.Global styles & reusable components
+   2.Navbar styles
+   3.Header styles
+   4.Meet biom section styles
+   5.Horizontal scroll section styles
+   6.Choose vessel section styles
+   7.Testimonials section styles
+   8.Biom wipes section styles
+   9.Video section styles
+   10.Instagram section styles
+   11.Footer styles
+   12.Responsivnes
+   =============== */
+
+
+/* ===============
+   Variables for fonts and colors
+   =============== */
+:root {
+    --chronicle: 'Chronicle Display', sans-serif;
+    --brandon: 'Brandon Grotesque', serif;
+
+    --gray: #F2F2F2;
+    --green: #004A4C;
+    --yellow: #DDA74A;
+    --grayish-blue: #DAE5E5;
+    --black: #002D33;
+    --beige: #FFFAFA;
+}
+
+/* ===============
+   1.GLOBAL STYLES & REUSABLE COMPONENTS
+   =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+nav, header, section, footer {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
+
+button {
+    background: unset;
+    border: none;
+    outline: none;
+}
+
+.white-btn {
+    display: inline-block;
+    background-color: #fff;
+    padding: 1em 2.2em;
+    font-family: var(--brandon);
+    font-weight: 900;
+    color: var(--green);
+    border-radius: 10px;
+    letter-spacing: 1.95px;
+}
+
+.white-btn:hover {
+    background-color: var(--beige);
+}
+
+.green-btn {
+    display: inline-block;
+    background-color: var(--green);
+    padding: 1em 2.2em;
+    font-family: var(--brandon);
+    font-weight: 900;
+    color: var(--beige);
+    border-radius: 10px;
+    letter-spacing: 1.95px;
+}
+
+.green-btn:hover {
+    background-color: var(--black);
+}
+
+.border-btn {
+    border: 2px solid var(--green);
+    padding: 0 0 0 .8em;
+    border-radius: 6px;
+    font-family: var(--brandon);
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--green);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border-btn span {
+    padding: .8rem;
+    border-left: 2px solid var(--green);
+    margin-left: .5rem;
+    display: grid;
+    place-items: center;
+}
+
+.component-h3 {
+    font-family: var(--brandon);
+    font-weight: 300;
+    letter-spacing: 2.1px;
+    color: var(--black);
+}
+
+.component-h1 {
+    font-family: var(--chronicle);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.component-p {
+    max-width: 80%;
+    font-family: var(--brandon);
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.component-ul {
+    margin-bottom: 2rem;
+}
+
+.component-li {
+    display: flex;
+    align-items: center;
+}
+
+.component-li:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.component-li p {
+    font-family: var(--brandon);
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.component-li img {
+    margin-right: 1rem;
+}
+
+/* ===============
+   2.NAVBAR STYLES START
+   =============== */
+.navbar {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--brandon);
+    font-size: 1.1rem;
+    font-weight: 900;
+    padding: 1rem 2.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar__container-1 {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.navbar__container-2 {
+    display: flex;
+    align-items: center;
+}
+
+#navbar__cart-btn {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar__cart-btn img {
+    margin-left: 10px;
+}
+
+#navbar__notifications {
+    position: absolute;
+    font-size: .60rem;
+    color: #fff;
+    font-weight: 300;
+    right: -5px;
+    top: -5px;
+    background-color: var(--yellow);
+    width: 12px;
+    height: 15px;
+    border-radius: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .5px solid #fff;
+}
+
+#hamburger-menu {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 30px;
+    height: 24px;
+}
+
+.bar {
+    width: 100%;
+    height: 5px;
+    background-color: var(--black);
+    transition: 0.4s;
+}
+
+.bar:nth-child(1).active {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+  
+.bar:nth-child(2).active {
+    opacity: 0;
+}
+  
+.bar:nth-child(3).active {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.navbar__menu-container {
+    position: absolute;
+    top: 5.1rem;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.navbar__menu-container.active {
+    height: 45vh;
+}
+
+.navbar__menu-item {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+
+.navbar__menu-item:not(:last-child) {
+    text-align: center;
+}
+
+/* ===============
+   3.HEADER STYLES START
+   =============== */
+.header {
+    position: relative;
+    padding: 2rem;
+}
+
+.header__image {
+    max-width: 100%;
+    z-index: -5;
+}
+
+.header__text-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 450px;
+}
+
+.header__text-content h1 {
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+.header__text-content p {
+    color: #fff;
+}
+
+/* ===============
+   4.MEET BIOM SECTION STYLES START
+   =============== */
+.meet-biom {
+    position: relative;
+    background: url('./assets/images/meet-biom-bg.png') no-repeat bottom;
+    background-size: contain;
+    min-height: 720px;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.meet-biom__text-content {
+    margin-left: 45%;
+}
+
+#scroll-text {
+    position: absolute;
+    left: -30px;
+    bottom: 12rem;
+    font-family: var(--brandon);
+    font-weight: 900;
+    font-size: 14rem;
+    color: var(--grayish-blue);
+    z-index: -5;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    opacity: 0.8;
+    transition: bottom 1s;
+}
+
+#scroll-text.active {
+    bottom: -12rem;
+}
+
+/* ===============
+   5.HORIZONTAL SCROLL SECTION STYLES START
+   =============== */
+.horizontal-scroll {
+    background-color: #fff;
+}
+
+.horizontal-scroll__wrapper {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 6vw;
+    overflow: hidden;
+}
+
+.horizontal-scroll__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+}
+
+.horizontal-scroll__title h4 {
+    font-family: var(--brandon);
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.horizontal-scroll__title h1 {
+    font-family: var(--chronicle);
+    font-size: 5rem;
+    color: var(--black);
+}
+
+.horizontal-scroll__container {
+    display: flex;
+}
+
+.horizontal-scroll__img-box {
+    position: relative;
+    max-width: 60%;
+    width: 100%;
+    min-width: 460px;
+    flex-shrink: 0;
+    margin: 1.5em 1em;
+    overflow: hidden;
+}
+
+.horizontal-scroll__img-box img {
+    max-width: 100%;
+    height: 100%;
+    transition: 0.8s;
+}
+
+.horizontal-scroll__img-box:hover img {
+    transform: scale(1.1);
+}
+
+.horizontal-scroll__img-box p {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    font-family: var(--chronicle);
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-size: 1.5rem;
+    transition: 0.4s;
+}
+
+.horizontal-scroll__img-box:hover p {
+    opacity: 1;
+}
+
+/* ===============
+   6.CHOOSE VESSEL SECTION STYLES START
+   =============== */
+.choose-vessel__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    place-items: center;
+    padding: 1rem 1rem 0;
+    overflow: hidden;
+}
+
+.choose-vessel__img-content {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.choose-vessel__img-content img {
+    max-width: 90%;
+    transition: .4s;
+}
+
+.choose-vessel__img-content:hover img {
+    transform: translateX(95px);
+}
+
+.choose-vessel__img-content:hover .choose-vessel__title {
+    opacity: 1;
+}
+
+.choose-vessel__title {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    opacity: 0;
+    transition: .4s;
+}
+
+.choose-vessel__title h1 {
+    font-family: var(--chronicle);
+    font-size: 1.5rem;
+}
+
+.choose-vessel__title h2 {
+    font-family: var(--brandon);
+    font-size: 1.1rem;
+}
+
+.choose-vessel__text-content {
+    flex-shrink: 0;
+    max-width: 320px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.choose-vessel__text-content h1 {
+    font-family: var(--chronicle);
+    font-size: 1.9rem;
+    margin-bottom: 1em;
+}
+
+.choose-vessel__text-content button:hover img {
+    transform: translateX(5px);
+}
+
+/* ===============
+   7.TESTIMONIALS SECTION STYLES START
+   =============== */
+.testimonials {
+    background-color: var(--gray);
+}
+
+.testimonials__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4em 0;
+}
+
+.testimonial {
+    display: none;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.testimonial h2 {
+    font-family: var(--brandon);
+    color: var(--green);
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.testimonial p {
+    font-family: var(--chronicle);
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--green);
+    margin-bottom: 1em;
+}
+
+.testimonial-name {
+    font-family: var(--brandon);
+    font-size: 1.2rem;
+}
+
+.testimonials__dots {
+    margin-top: 4rem;
+    display: flex;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.dot.active {
+    background-color: var(--green);
+}
+
+/* ===============
+   8.BIOM WIPES SECTION STYLES START
+   =============== */
+.biom-wipes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5rem 1rem;
+}
+
+.biom-wipes__img-content {
+    position: relative;
+    max-width: 50%;
+}
+
+.biom-wipes__img-content img:first-child {
+    max-width: 95%;
+}
+
+.biom-wipes__img-content img:last-child {
+    max-width: 55%;
+    position: absolute;
+    bottom: -65px;
+    right: -65px;
+}
+
+.biom-wipes__text-content {
+    margin-left: 3rem;
+    position: relative;
+    max-width: 50%;
+}
+
+.biom-wipes__text-content ul {
+    margin-left: 3rem;
+}
+
+.biom-wipes__text-content .green-btn {
+    margin-left: 3rem;
+}
+
+.biom-wipes__text-content::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 5%;
+    z-index: -5;
+    width: 120%;
+    height: 100%;
+    background-color: #DAE5E5;
+    border-radius: 12px;
+}
+
+/* ===============
+   9.VIDEO SECTION STYLES START
+   =============== */
+.video-section {
+    position: relative;
+    padding: 2rem;
+}
+
+.video-section video {
+    max-width: 100%;
+    border-radius: 14px;
+}
+
+.video-section__text-content {
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-section__text-content h3,
+.video-section__text-content h1,
+.video-section__text-content p {
+    color: #fff;
+}
+
+.video-section__text-content p {
+    min-width: 100%;
+}
+
+/* ===============
+   10.INSTAGRAM SECTION STYLES START
+   =============== */
+.instagram-section {
+    text-align: center;
+    overflow: hidden;
+}
+
+.instagram-section .border-btn {
+    margin: auto;
+}
+
+.instagram-section__images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 300px;
+    margin: 3rem 0;
+    transition: 0.8s ease;
+}
+
+.instagram-section__images img:nth-child(2),
+.instagram-section__images img:nth-child(4),
+.instagram-section__images img:nth-child(6) {
+    align-self:flex-end;
+}
+
+.instagram-section__images img {
+    margin-left: 2em;
+    width: 100%;
+}
+
+/* ===============
+   11.FOOTER STYLES START
+   =============== */
+footer {
+    position: relative;
+    background-color: #398285;
+    min-height: 380px;
+    margin-top: 220px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.newsletter-section {
+    background: var(--gray) url('./assets/images/Biom_wipe_2.png') no-repeat padding-box bottom;
+    width: 90%;
+    border-radius: 14px;
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem 7rem;
+}
+
+.newsletter-section__text-content {
+    max-width: 60%;
+}
+
+.newsletter-section__input span {
+    position: absolute;
+    right: 10px;
+    top: -0.1em;
+    padding: 0.4em 0.7em;
+    border-radius: 6px;
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+.newsletter-section__input span:hover {
+    background-color: var(--black);
+}
+
+.newsletter-section__input {
+    width: 60%;
+    position: relative;
+}
+
+input[type="email"] {
+    background: #fff;
+    border: none;
+    outline: none;
+    font-family: var(--brandon);
+    font-size: 1.3rem;
+    width: 100%;
+    padding: .35em .75em;
+    margin-top: -0.5rem;
+    border-radius: 6px;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.footer-navigation__container-1 {
+    display: flex;
+    margin-right: 4rem;
+}
+
+.footer-navigation__container-2 {
+    display: flex;
+    margin-left: 4rem;
+}
+
+.footer__item {
+    color: #fff;
+    font-family: var(--brandon);
+    font-weight: 900;
+}
+
+.footer__item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.footer__copyright-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+.footer__copyright-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: calc(100% - 6rem);
+    background-color: var(--green);
+}
+
+.footer__copyright-section span,
+.footer__copyright-section a {
+    color: #fff;
+    font-family: var(--brandon);
+    font-weight: 300;
+}
+
+.social-links a {
+    background-color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 1rem;
+}
+
+
+/* ===============
+   12.RESPONSIVNES FOR LARGER SCREENS
+   =============== */
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: 13px;
+    }
+
+    .meet-biom__list-item img {
+        max-width: 30%;
+    }
+}
+
+/* ===============
+   RESPONSIVNES FOR MIDDLE SIZED SCREENS
+   =============== */
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 11px;
+    }
+
+    .navbar__container-1 {
+        display: none;
+    }
+
+    .navbar__container-2 {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: flex;
+    }
+
+    .meet-biom {
+        min-height: 500px;
+    }
+
+    .meet-biom__list-item img {
+        max-width: 10%;
+    }
+
+    #scroll-text {
+        display: none;
+    }
+
+    .biom-wipes {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .biom-wipes__img-content {
+        margin-bottom: 5rem;
+        max-width: 70%;
+    }
+
+    .biom-wipes__text-content {
+        max-width: 90%;
+    }
+}
+
+/* ===============
+   RESPONSIVNES FOR MOBILES
+   =============== */
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 9px;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .header__image {
+        min-height: 200px;
+    }
+
+    .header__text-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .meet-biom__text-content {
+        margin-left: 10%;
+    }
+
+    .horizontal-scroll__wrapper {
+        top: 20vh;
+    }
+
+    .choose-vessel__text-content {
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .biom-wipes__img-content img:last-child {
+        display: none;
+    }
+
+    .video-section {
+        padding: 0;
+    }
+
+    .video-section__text-content {
+        width: 90%;
+    }
+
+    .newsletter-section {
+        padding: 4rem 3rem;
+    }
+
+    .newsletter-section__text-content {
+        max-width: 100%;
+    }
+
+    .newsletter-section__input {
+        width: 80%;
+    }
+
+    .footer-navigation {
+        flex-direction: column;
+    }
+
+    .footer-navigation__container-1 {
+        order: 2;
+        margin: 2rem 0;
+    }
+    
+    .footer-navigation__container-2 {
+        margin: 2rem 0;
+    }
+}
