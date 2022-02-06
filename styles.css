@@ -38,7 +38,7 @@
    9.Video section styles
    10.Instagram section styles
    11.Footer styles
-   12.Responsivnes
+   12.Responsivness
    =============== */
 
 
@@ -820,7 +820,7 @@ input[type="email"] {
 
 
 /* ===============
-   12.RESPONSIVNES FOR LARGER SCREENS
+   12.RESPONSIVNESS FOR LARGER SCREENS
    =============== */
 @media screen and (max-width: 1100px) {
     html {
@@ -833,7 +833,7 @@ input[type="email"] {
 }
 
 /* ===============
-   RESPONSIVNES FOR MIDDLE SIZED SCREENS
+   RESPONSIVNESS FOR MIDDLE SIZED SCREENS
    =============== */
 @media screen and (max-width: 900px) {
     html {
@@ -880,7 +880,7 @@ input[type="email"] {
 }
 
 /* ===============
-   RESPONSIVNES FOR MOBILES
+   RESPONSIVNESS FOR MOBILES
    =============== */
 @media screen and (max-width: 700px) {
     html {
