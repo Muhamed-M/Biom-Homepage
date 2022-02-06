@@ -1,7 +1,7 @@
 # Biom-Homepage
 Tech stack used: HTML5, CSS3, JavaScript
 
-I really enjoyed doing this test, the design is beautiful.
+I really enjoyed doing this test, the design is very beautiful.
 When i first looked at the website i divided it into sections and thought about how i would approach 
 each section and which tools I will use. Responsivness was a little bit tricky, but I also solved it without too much difficulty, I hope you like it.
 The section in which the images moved horizontally also required little thought.
