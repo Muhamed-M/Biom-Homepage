@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Chronicle Display";
+  src: url("../fonts/ChronicleDisplay-Black.woff2") format("woff2"),
+    url("../fonts/ChronicleDisplay-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("../fonts/BrandonGrotesque-Black.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesque-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url('../fonts/BrandonGrotesque-Regular.woff2') format('woff2'),
+      url('../fonts/BrandonGrotesque-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("../fonts/BrandonGrotesque-Light.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesque-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===============
+ Variables for fonts and colors
+ =============== */
+ :root {
+  --chronicle: "Chronicle Display", sans-serif;
+  --brandon: "Brandon Grotesque", serif;
+
+  --gray: #f2f2f2;
+  --green: #004a4c;
+  --yellow: #dda74a;
+  --grayish-blue: #dae5e5;
+  --black: #002d33;
+  --beige: #fffafa;
+}
+
+/* ===============
+   GLOBAL STYLES & REUSABLE COMPONENTS
+   =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+header,
+section {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+button {
+  background: unset;
+  border: none;
+  outline: none;
+}
+
+.white-btn {
+  display: inline-block;
+  background-color: #fff;
+  padding: 1em 2.2em;
+  font-family: var(--brandon);
+  font-weight: 900;
+  color: var(--green);
+  border-radius: 10px;
+  letter-spacing: 1.95px;
+}
+
+.white-btn:hover {
+  background-color: var(--beige);
+}
+
+.green-btn {
+  display: inline-block;
+  background-color: var(--green);
+  padding: 1em 2.2em;
+  font-family: var(--brandon);
+  font-weight: 900;
+  color: var(--beige);
+  border-radius: 10px;
+  letter-spacing: 1.95px;
+}
+
+.green-btn:hover {
+  background-color: var(--black);
+}
+
+.border-btn {
+  border: 2px solid var(--green);
+  padding: 0 0 0 0.8em;
+  border-radius: 6px;
+  font-family: var(--brandon);
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--green);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.border-btn span {
+  padding: 0.8rem;
+  border-left: 2px solid var(--green);
+  margin-left: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.component-h3 {
+  font-family: var(--brandon);
+  font-weight: 300;
+  letter-spacing: 2.1px;
+  color: var(--black);
+}
+
+.component-h1 {
+  font-family: var(--chronicle);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.component-p {
+  max-width: 90%;
+  font-family: var(--brandon);
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.component-ul {
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.component-li {
+  display: flex;
+  align-items: center;
+}
+
+.component-li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.component-li p {
+  font-family: var(--brandon);
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.component-li img {
+  margin-right: 1rem;
+}  

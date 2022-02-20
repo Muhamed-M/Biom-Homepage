@@ -30,7 +30,6 @@ const horizontalSection = document.querySelector('.horizontal-scroll');
 const scrollContainer = document.querySelector('.horizontal-scroll__container');
 
 let scrollDistance = scrollContainer.scrollWidth;
-
 horizontalSection.style.height = `${scrollDistance}px`;
 
 window.addEventListener('scroll', () => {
@@ -66,12 +65,12 @@ dots.forEach((dot, index) => {
 const instagramSection = document.querySelector('.instagram-section');
 const imagesContainer = document.querySelector('.instagram-section__images');
 
-const revealPoint = 120;
+const revealPoint = 500;
 
 window.addEventListener('scroll', () => {
     let vwOffsetTop = instagramSection.getBoundingClientRect().top; // elements distance from top of the viewport
 
     if (vwOffsetTop < revealPoint) { // if it's less than reveal point we specified, then move images
-        imagesContainer.style.transform = `translateX(${vwOffsetTop * -2}px)`;
+        imagesContainer.style.transform = `translateX(${vwOffsetTop / 4 - revealPoint / 4}px)`;
     }
 });

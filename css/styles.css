@@ -1,0 +1,660 @@
+/* ===============
+   Table of contents:
+   1.Navbar styles
+   2.Header styles
+   3.Meet biom section styles
+   4.Horizontal scroll section styles
+   5.Choose vessel section styles
+   6.Testimonials section styles
+   7.Biom wipes section styles
+   8.Video section styles
+   9.Instagram section styles
+   10.Footer styles
+   =============== */
+/* ===============
+   1.NAVBAR STYLES START
+   =============== */
+.navbar {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--brandon);
+  font-size: 1.1rem;
+  font-weight: 900;
+  padding: 1rem 3rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar__container-1 {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.navbar__container-2 {
+  display: flex;
+  align-items: center;
+}
+
+#navbar__cart-btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar__cart-btn img {
+  margin-left: 10px;
+}
+
+#navbar__notifications {
+  position: absolute;
+  font-size: 0.6rem;
+  color: #fff;
+  font-weight: 300;
+  right: -5px;
+  top: -5px;
+  background-color: var(--yellow);
+  width: 12px;
+  height: 15px;
+  border-radius: 45%;
+  display: grid;
+  place-items: center;
+  border: 0.5px solid #fff;
+}
+
+#hamburger-menu {
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  transition: 0.4s;
+}
+
+.bar:nth-child(1).active {
+  -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.bar:nth-child(2).active {
+  opacity: 0;
+}
+
+.bar:nth-child(3).active {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.navbar__menu-container {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.navbar__menu-container.active {
+  height: 70vh;
+}
+
+.navbar__menu-item {
+  margin: 3rem 0;
+  font-size: 1.5rem;
+}
+
+.navbar__menu-item:not(:last-child) {
+  text-align: center;
+}
+
+/* ===============
+   2.HEADER STYLES START
+   =============== */
+.header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.header__image {
+  max-width: 100%;
+  z-index: -5;
+}
+
+.header__text-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 450px;
+}
+
+.header__text-content h1 {
+  color: #fff;
+  font-size: 3.5rem;
+}
+
+.header__text-content p {
+  color: #fff;
+  font-weight: 300;
+}
+
+/* ===============
+   3.MEET BIOM SECTION STYLES START
+   =============== */
+.meet-biom {
+  position: relative;
+  background: url("../assets/images/meet-biom-bg.png") no-repeat bottom;
+  background-size: contain;
+  min-height: 720px;
+  display: grid;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.meet-biom__text-content {
+  margin-left: 45%;
+}
+
+#scroll-text {
+  position: absolute;
+  left: -30px;
+  bottom: 12rem;
+  font-family: var(--brandon);
+  font-weight: 900;
+  font-size: 14rem;
+  color: var(--gray);
+  z-index: -5;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  opacity: 0.8;
+  transition: bottom 1s;
+}
+
+#scroll-text.active {
+  bottom: -12rem;
+}
+
+/* ===============
+   4.HORIZONTAL SCROLL SECTION STYLES START
+   =============== */
+.horizontal-scroll {
+  background-color: #fff;
+}
+
+.horizontal-scroll__wrapper {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 6vh;
+  overflow: hidden;
+}
+
+.horizontal-scroll__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+}
+
+.horizontal-scroll__title h4 {
+  font-family: var(--brandon);
+  font-weight: normal;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.horizontal-scroll__title h1 {
+  font-family: var(--chronicle);
+  font-size: 5rem;
+  color: #fff;
+}
+
+.horizontal-scroll__container {
+  display: flex;
+}
+
+.horizontal-scroll__img-box {
+  position: relative;
+  max-width: 60%;
+  width: 100%;
+  min-width: 460px;
+  flex-shrink: 0;
+  margin: 1.5em 1em;
+  overflow: hidden;
+}
+
+.horizontal-scroll__img-box img {
+  max-width: 100%;
+  height: 100%;
+  transition: 0.8s;
+}
+
+.horizontal-scroll__img-box:hover img {
+  transform: scale(1.1);
+}
+
+.horizontal-scroll__img-box p {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+  font-family: var(--chronicle);
+  color: #fff;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+
+.horizontal-scroll__img-box:hover p {
+  opacity: 1;
+}
+
+/* ===============
+   5.CHOOSE VESSEL SECTION STYLES START
+   =============== */
+.choose-vessel__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  place-items: center;
+  overflow: hidden;
+  padding: 3rem 1rem 0;
+  margin-bottom: -19px;
+}
+
+.choose-vessel__img-content {
+  position: relative;
+}
+
+.choose-vessel__img-content img {
+  max-width: 100%;
+  transition: 0.2s;
+}
+
+.choose-vessel__img-content:hover img {
+  transform: translateX(95px);
+}
+
+.choose-vessel__img-content:hover .choose-vessel__title {
+  opacity: 1;
+}
+
+.choose-vessel__title {
+  position: absolute;
+  left: -3%;
+  bottom: 7%;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.choose-vessel__title h1 {
+  font-family: var(--chronicle);
+  font-size: 1.5rem;
+}
+
+.choose-vessel__title h2 {
+  font-family: var(--brandon);
+  font-size: 1.1rem;
+}
+
+.choose-vessel__text-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+.choose-vessel__text-content button:hover img {
+  transform: translateX(3px);
+}
+
+/* ===============
+   6.TESTIMONIALS SECTION STYLES START
+   =============== */
+.testimonials {
+  background-color: #EDEDED;
+}
+
+.testimonials__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4em 0;
+}
+
+.testimonial {
+  display: none;
+  min-height: 310px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.testimonial h2 {
+  font-family: var(--brandon);
+  color: var(--green);
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.testimonial p {
+  max-width: 65%;
+  font-family: var(--chronicle);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--green);
+  margin-bottom: 1em;
+}
+
+.testimonial-name {
+  font-family: var(--brandon);
+  font-size: 1.2rem;
+  color: var(--black);
+}
+
+.testimonials__dots {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--green);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.dot.active {
+  background-color: var(--green);
+}
+
+/* ===============
+   7.BIOM WIPES SECTION STYLES START
+   =============== */
+.biom-wipes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.biom-wipes__img-content {
+  position: relative;
+  max-width: 50%;
+}
+
+.biom-wipes__img-content img:first-child {
+  max-width: 95%;
+}
+
+.biom-wipes__img-content img:last-child {
+  max-width: 55%;
+  position: absolute;
+  bottom: -65px;
+  right: -65px;
+}
+
+.biom-wipes__text-content {
+  margin-left: 3rem;
+  position: relative;
+  max-width: 50%;
+}
+
+.biom-wipes__text-content ul {
+  margin-left: 3rem;
+}
+
+.biom-wipes__text-content .green-btn {
+  margin-left: 3rem;
+}
+
+.biom-wipes__text-content::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 5%;
+  z-index: -5;
+  width: 120%;
+  height: 100%;
+  background-color: #dae5e5;
+  border-radius: 12px;
+}
+
+/* ===============
+   8.VIDEO SECTION STYLES START
+   =============== */
+.video-section {
+  position: relative;
+  padding: 2rem;
+}
+
+.video-section video {
+  max-width: 100%;
+  border-radius: 14px;
+}
+
+.video-section__text-content {
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-section__text-content h3,
+.video-section__text-content h1,
+.video-section__text-content p {
+  color: #fff;
+}
+
+.video-section__text-content p {
+  min-width: 100%;
+}
+
+/* ===============
+   9.INSTAGRAM SECTION STYLES START
+   =============== */
+.instagram-section {
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.instagram-section__images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 300px;
+  margin: 3rem 0;
+  transition: 0.8s ease;
+}
+
+.instagram-section__images img:nth-child(2),
+.instagram-section__images img:nth-child(4),
+.instagram-section__images img:nth-child(6) {
+  align-self: flex-end;
+}
+
+.instagram-section__images img {
+  margin-left: 2em;
+  width: 100%;
+}
+
+.border-btn .fa-instagram {
+  font-size: 1.6rem;
+}
+
+.instagram-section .border-btn:hover span {
+  background-color: var(--green);
+}
+
+.instagram-section .border-btn:hover i {
+  color: #fff;
+}
+
+/* ===============
+   10.FOOTER STYLES START
+   =============== */
+.footer {
+  position: relative;
+  background-color: #398285;
+  min-height: 380px;
+  margin-top: 240px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.newsletter-section {
+  background: var(--gray) url("../assets/images/biom-wipe-2.png") no-repeat bottom;
+  max-width: 1440px;
+  width: 90%;
+  border-radius: 14px;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3% 6%;
+}
+
+.newsletter-section__text-content {
+  max-width: 60%;
+}
+
+.newsletter-section__input span {
+  position: absolute;
+  right: 10px;
+  top: -0.1em;
+  padding: 0.4em 0.7em;
+  border-radius: 6px;
+  background-color: var(--green);
+  cursor: pointer;
+}
+
+.newsletter-section__input span:hover {
+  background-color: var(--black);
+}
+
+.newsletter-section__input span:hover img {
+  transform: translateX(3px);
+}
+
+.newsletter-section__input {
+  width: 60%;
+  position: relative;
+}
+
+input[type="email"] {
+  background: #fff;
+  border: none;
+  outline: none;
+  font-family: var(--brandon);
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 0.35em 0.75em;
+  margin-top: -0.5rem;
+  border-radius: 6px;
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.footer-navigation__container-1 {
+  display: flex;
+  margin-right: 6rem;
+}
+
+.footer-navigation__container-2 {
+  display: flex;
+  margin-left: 6rem;
+}
+
+.footer__item {
+  color: #fff;
+  font-family: var(--brandon);
+  font-weight: 900;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.footer__copyright-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+}
+
+.footer__copyright-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: calc(100% - 6rem);
+  background-color: var(--green);
+}
+
+.footer__copyright-section span,
+.footer__copyright-section a {
+  color: #fff;
+  font-family: var(--brandon);
+  font-weight: 300;
+}
+
+.social-links a {
+  background-color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+}
+
+.social-links i {
+  font-size: 1.2rem;
+  color: var(--black);
+}
