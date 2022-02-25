@@ -16,6 +16,7 @@
    =============== */
 .navbar {
   position: sticky;
+  position: -webkit-sticky;
   z-index: 10;
   top: 0;
   display: flex;
@@ -170,6 +171,10 @@
   margin-left: 45%;
 }
 
+.meet-biom__text-content h1 {
+  color: var(--black);
+}
+
 #scroll-text {
   position: absolute;
   left: -30px;
@@ -215,8 +220,8 @@
 
 .horizontal-scroll__title h4 {
   font-family: var(--brandon);
-  font-weight: normal;
-  font-size: 1.8rem;
+  font-weight: 300;
+  font-size: 1.7rem;
   color: #fff;
 }
 
@@ -487,6 +492,10 @@
   padding: 2rem 0;
 }
 
+.instagram-section h1 {
+  color: var(--black);
+}
+
 .instagram-section__images {
   display: flex;
   justify-content: center;
@@ -508,6 +517,7 @@
 
 .border-btn .fa-instagram {
   font-size: 1.6rem;
+  transition: .2s;
 }
 
 .instagram-section .border-btn:hover span {
@@ -551,7 +561,7 @@
   position: absolute;
   right: 10px;
   top: -0.1em;
-  padding: 0.4em 0.7em;
+  padding: 0.6em 0.7em;
   border-radius: 6px;
   background-color: var(--green);
   cursor: pointer;
@@ -571,15 +581,19 @@
 }
 
 input[type="email"] {
-  background: #fff;
+  background: #FFFAFA;
   border: none;
   outline: none;
   font-family: var(--brandon);
   font-size: 1.3rem;
   width: 100%;
-  padding: 0.35em 0.75em;
+  padding: 0.5em 0.75em;
   margin-top: -0.5rem;
   border-radius: 6px;
+}
+
+input[type="email"]::placeholder {
+  color: #000;
 }
 
 .footer-navigation {
