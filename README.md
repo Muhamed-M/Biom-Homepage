@@ -7,5 +7,3 @@ each section and which tools I will use. Responsivness was a little bit tricky, 
 The section in which the images moved horizontally also required little thought.
 
 It took me three days with 3-4 hours each day to complete this challenge.
-
-note: If you are resizing browser, please reload the page to restart the variables and make all the animations work properly.

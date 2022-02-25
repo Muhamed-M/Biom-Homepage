@@ -29,8 +29,16 @@ window.addEventListener('scroll', scrollText);
 const horizontalSection = document.querySelector('.horizontal-scroll');
 const scrollContainer = document.querySelector('.horizontal-scroll__container');
 
-let scrollDistance = scrollContainer.scrollWidth;
+let scrollDistance = 0;
+
+scrollDistance = scrollContainer.scrollWidth;
 horizontalSection.style.height = `${scrollDistance}px`;
+
+// If browser is resized restart variables
+window.addEventListener('resize', () => {
+    scrollDistance = scrollContainer.scrollWidth;
+    horizontalSection.style.height = `${scrollDistance}px`;
+});
 
 window.addEventListener('scroll', () => {
     let vwOffsetTop = horizontalSection.getBoundingClientRect().top; // elements distance from top of the viewport

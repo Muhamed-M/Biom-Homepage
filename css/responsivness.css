@@ -5,13 +5,21 @@
     html {
       font-size: 15px;
     }
+
+    .navbar__container {
+      display: none;
+    }
+
+    #hamburger-menu {
+      display: flex;
+    }
   
     .header {
       overflow: hidden;
     }
   
     .header__image {
-      height: calc(100vh - 4.5rem);
+      height: calc(100vh - 4.4rem);
       max-width: none;
       margin-left: -50px;
     }
@@ -21,24 +29,16 @@
       right: 5%;
     }
   
-    .navbar__container-1 {
-      display: none;
-    }
-  
-    .navbar__container-2 {
-      display: none;
-    }
-  
-    #hamburger-menu {
-      display: flex;
-    }
-  
     .meet-biom {
       min-height: 500px;
     }
   
     #scroll-text {
       display: none;
+    }
+
+    .horizontal-scroll__wrapper {
+      top: 20vh;
     }
 
     .testimonial {
@@ -58,6 +58,14 @@
       max-width: none;
     }
 
+    .biom-wipes__text-content ul {
+      margin-left: 0;
+    }
+    
+    .biom-wipes__text-content .green-btn {
+      margin-left: 0;
+    }
+
     .newsletter-section__text-content {
       max-width: none;
     }
@@ -71,18 +79,26 @@
       font-size: 14px;
     }
 
+    .header__text-content {
+      text-align: center;
+    }
+
+    .header__text-content p {
+      max-width: 100%;
+    }
+
     .white-btn,
     .green-btn {
       text-align: center;
       width: 100%;
     }
+
+    .meet-biom {
+      background: none;
+    }
   
     .meet-biom__text-content {
       margin-left: 0;
-    }
-  
-    .horizontal-scroll__wrapper {
-      top: 20vh;
     }
   
     .horizontal-scroll__title {
@@ -96,7 +112,7 @@
     }
 
     .testimonial {
-        min-height: 430px;
+        min-height: 420px;
     }
 
     .testimonial p {
@@ -121,14 +137,6 @@
       left: -2rem;
       width: 130%;
       height: 120%;
-    }
-
-    .biom-wipes__text-content ul {
-      margin-left: 0;
-    }
-    
-    .biom-wipes__text-content .green-btn {
-      margin-left: 0;
     }
   
     .video-section {
@@ -155,6 +163,7 @@
       transform: translateX(0);
       width: 100%;
       border-radius: 0;
+      padding: 4rem 6%;
     }
   
     .newsletter-section__input {
@@ -163,6 +172,7 @@
   
     .footer-navigation {
       flex-direction: column;
+      padding: 1rem;
     }
   
     .footer-navigation__container-1 {
