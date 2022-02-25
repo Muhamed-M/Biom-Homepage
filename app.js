@@ -78,7 +78,7 @@ const revealPoint = 500;
 window.addEventListener('scroll', () => {
     let vwOffsetTop = instagramSection.getBoundingClientRect().top; // elements distance from top of the viewport
 
-    if (vwOffsetTop < revealPoint) { // if it is less than reveal point we specified, then move images
+    if (vwOffsetTop < revealPoint) { // if it's less than reveal point we specified, then move images
         imagesContainer.style.transform = `translateX(${vwOffsetTop / 4 - revealPoint / 4}px)`;
     }
 });
