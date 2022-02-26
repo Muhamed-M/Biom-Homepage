@@ -125,7 +125,7 @@ button {
 }
 
 .border-btn span {
-  padding: 0.8rem;
+  padding: 1rem 0.9rem;
   border-left: 2px solid var(--green);
   margin-left: 0.5rem;
   display: grid;

@@ -168,6 +168,7 @@
   
     .newsletter-section__input {
       width: 80%;
+      margin: auto;
     }
   
     .footer-navigation {
