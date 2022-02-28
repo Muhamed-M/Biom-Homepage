@@ -192,7 +192,7 @@
 }
 
 #scroll-text.active {
-  bottom: -12rem;
+  bottom: -13rem;
 }
 
 /* ===============
@@ -331,7 +331,7 @@
    6.TESTIMONIALS SECTION STYLES START
    =============== */
 .testimonials {
-  background-color: #EDEDED;
+  background-color: #ededed;
   max-width: none;
 }
 
@@ -517,7 +517,7 @@
 
 .border-btn .fa-instagram {
   font-size: 1.6rem;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .instagram-section .border-btn:hover span {
@@ -542,7 +542,8 @@
 }
 
 .newsletter-section {
-  background: var(--gray) url("../assets/images/biom-wipe-2.png") no-repeat bottom;
+  background: var(--gray) url("../assets/images/biom-wipe-2.png") no-repeat
+    bottom;
   max-width: 1440px;
   width: 90%;
   border-radius: 14px;
@@ -581,7 +582,7 @@
 }
 
 input[type="email"] {
-  background: #FFFAFA;
+  background: #fffafa;
   border: none;
   outline: none;
   font-family: var(--brandon);

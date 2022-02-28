@@ -12,13 +12,13 @@ hamburgerMenu.addEventListener('click', () => {
 
 // SCROLL TEXT EFFECT
 const scrollTextEl = document.getElementById('scroll-text');
+const meetBiomSection = document.querySelector('.meet-biom');
 
 const scrollText = () => {
-    let windowHeight = window.innerHeight;
-    let scrollTextElBottom = scrollTextEl.getBoundingClientRect().bottom;
+    let meetBiomSectionTop = meetBiomSection.getBoundingClientRect().top;
     let revealPoint = 100;
 
-    if (scrollTextElBottom < windowHeight - revealPoint)
+    if (meetBiomSectionTop < revealPoint)
         scrollTextEl.classList.add('active');
     else scrollTextEl.classList.remove('active');
 };
